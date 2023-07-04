@@ -94,4 +94,19 @@ describe('SingUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
   })
+
+  test('Should call Emailvalidator with corret email', () => {
+    const { sut , emailValidatorStub } = makeSut()
+    const isValid = jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'any_email@amil.com',
+        password: 'any_password',
+        passwordConfirmation: 'any_password'
+      }
+    }
+    sut.handle(httpRequest)
+    expect(isValid).toHaveBeenLastCalledWith('any_email@amil.com')
+  })
 })
