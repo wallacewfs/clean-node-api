@@ -1,4 +1,5 @@
 import { MongoClient, Collection } from 'mongodb'
+import { AccountModel } from '../../../../domain/models/account'
 
 export const MongoHelper = {
   client: null as MongoClient,
@@ -13,5 +14,14 @@ export const MongoHelper = {
 
   getColletion (name: string): Collection {
     return this.client.db().collection(name)
+  },
+
+  map: (collection: any): AccountModel => {
+    const { _id, ...collectionWithoutId } = collection
+    const collectionModel = {
+      ...collectionWithoutId,
+      id: _id.toHexString()
+    }
+    return collectionModel
   }
 }
