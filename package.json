@@ -17,9 +17,14 @@
   "dependencies": {
     "bcrypt": "^5.1.0",
     "git-commit-msg-linter": "^4.2.1",
-    "mongodb": "^5.7.0",
+    "mongodb": "6.0.7",
     "npm": "^8.19.2",
     "validator": "^13.9.0"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "version": "6.0.7"
+    }
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.7",
