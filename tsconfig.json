@@ -4,11 +4,14 @@
         "outDir": "./dist",
         "target": "es2019",
         "esModuleInterop": true,
-        "allowJs": true,
         "strict": false
         
     },
+    "include": [
+        "src"
+    ],
     "exclude": [
-        "node_modules"
+        "**/*.spec.ts",
+        "**/*.test.ts"
     ]
 }
