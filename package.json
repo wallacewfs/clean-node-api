@@ -2,10 +2,14 @@
   "name": "clean-node-api",
   "version": "1.1.0",
   "description": "NodeJS Rest API using TDD, Clean Architeture and Typescript",
+  "author": "Wallace Silva",
+  "repository": "github:wallacewfs/clean-node-api",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc",
+    "debug": "node --inspect=0.0.0.0:9222 --nolazy dist/main/server.js",
     "up": "npm run build && docker-compose up -d",
     "down": "docker-compose down", 
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand --no-cache",
@@ -16,8 +20,6 @@
     "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "express": "^4.18.2",
@@ -57,6 +59,6 @@
     "typescript": "^4.8.4"
   },
   "engines": {
-    "node": "18.x"
+    "node": "14.x"
   }
 }
