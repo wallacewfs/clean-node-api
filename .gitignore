@@ -3,4 +3,8 @@ dist
 coverage
 data
 .vscode
-
+coverage/coverage-final.json
+.gitignore
+coverage/clover.xml
+coverage/lcov.info
+.gitignore
