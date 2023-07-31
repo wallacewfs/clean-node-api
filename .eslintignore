@@ -1,4 +1,4 @@
 node_modules
 dist
 converage
-data
+./data
