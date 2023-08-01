@@ -12,7 +12,7 @@ const makeHasher = (): Hasher => {
 
 const makeLoadAccountByEmailRepository = (): LoadAccountByEmailRepository => {
   class LoadAccountByEmailRepositoryStub implements LoadAccountByEmailRepository {
-    async loadbyEmail (email: string): Promise<AccountModel> {
+    async loadbyEmail (email: string): Promise<AccountModel | null> {
       return new Promise(resolve => resolve(null))
     }
   }
