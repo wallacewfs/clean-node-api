@@ -61,7 +61,7 @@ describe('Account Mogo Repository', () => {
     })
   })
 
-  describe('loadByEmail()', () => {
+  describe('updateAccessToken()', () => {
     test('Should update the account accesToken on updateAccessToken succees', async () => {
       const sut = makeSut()
       const result = await accountCollection.insertOne({
@@ -75,6 +75,24 @@ describe('Account Mogo Repository', () => {
       const account = await accountCollection.findOne({ _id: result.insertedId })
       expect(account).toBeTruthy()
       expect(account?.accessToken).toBe('any_token')
+    })
+  })
+
+  describe('loadBytoken()', () => {
+    test('Should return an account on loadBytoken without role', async () => {
+      const sut = makeSut()
+      await accountCollection.insertOne({
+        name: 'any_name',
+        email: 'any_email@mail.com',
+        password: 'any_password',
+        accessToken: 'any_token'
+      })
+      const account = await sut.loadByToken('any_token')
+      expect(account).toBeTruthy()
+      expect(account?.id).toBeTruthy()
+      expect(account?.name).toBe('any_name')
+      expect(account?.email).toBe('any_email@mail.com')
+      expect(account?.password).toBe('any_password')
     })
   })
 })
