@@ -21,6 +21,7 @@ describe('Account Mogo Repository', () => {
   const makeSut = (): SurveyMongoRepository => {
     return new SurveyMongoRepository()
   }
+
   test('Should add a survey on sucess', async () => {
     const sut = makeSut()
     await sut.add({
@@ -30,7 +31,8 @@ describe('Account Mogo Repository', () => {
         answer: 'any_answer'
       }, {
         answer: 'other_answer'
-      }]
+      }],
+      date: new Date()
     })
     const survey = await surveyCollection.findOne({ question: 'any_question' })
     expect(survey).toBeTruthy()
