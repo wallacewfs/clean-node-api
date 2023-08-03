@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690842021743" clover="3.2.0">
-  <project timestamp="1690842021743" name="All files">
-    <metrics statements="152" coveredstatements="152" conditionals="14" coveredconditionals="14" methods="41" coveredmethods="41" elements="207" coveredelements="207" complexity="0" loc="152" ncloc="152" packages="13" files="22" classes="22"/>
+<coverage generated="1691022158772" clover="3.2.0">
+  <project timestamp="1691022158772" name="All files">
+    <metrics statements="203" coveredstatements="203" conditionals="25" coveredconditionals="25" methods="54" coveredmethods="54" elements="282" coveredelements="282" complexity="0" loc="203" ncloc="203" packages="18" files="28" classes="28"/>
     <package name="data.usecases.add-account">
       <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="db-addccount.ts" path="/home/wallace/cursos/clean-node-api/src/data/usecases/add-account/db-addccount.ts">
         <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="5" count="11" type="stmt"/>
-        <line num="6" count="11" type="stmt"/>
-        <line num="7" count="11" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
         <line num="10" count="8" type="stmt"/>
         <line num="11" count="8" type="cond" truecount="1" falsecount="0"/>
         <line num="12" count="7" type="stmt"/>
@@ -18,15 +18,24 @@
         <line num="16" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="data.usecases.add-survey">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="db-add-survey.ts" path="/home/wallace/cursos/clean-node-api/src/data/usecases/add-survey/db-add-survey.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+      </file>
+    </package>
     <package name="data.usecases.authentication">
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="db-authentication.ts" path="/home/wallace/cursos/clean-node-api/src/data/usecases/authentication/db-authentication.ts">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="12" count="19" type="stmt"/>
-        <line num="13" count="19" type="stmt"/>
-        <line num="14" count="19" type="stmt"/>
-        <line num="15" count="19" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="12" count="21" type="stmt"/>
+        <line num="13" count="21" type="stmt"/>
+        <line num="14" count="21" type="stmt"/>
+        <line num="15" count="21" type="stmt"/>
         <line num="19" count="14" type="stmt"/>
         <line num="20" count="13" type="cond" truecount="1" falsecount="0"/>
         <line num="21" count="11" type="stmt"/>
@@ -37,13 +46,28 @@
         <line num="28" count="4" type="stmt"/>
       </file>
     </package>
+    <package name="data.usecases.load-account-by-token">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="db-load-account-by-token.ts" path="/home/wallace/cursos/clean-node-api/src/data/usecases/load-account-by-token/db-load-account-by-token.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="infra.criptography.bcrypt-adapter">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="bcrypt-adapter.ts" path="/home/wallace/cursos/clean-node-api/src/infra/criptography/bcrypt-adapter/bcrypt-adapter.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="6" count="19" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="22" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="14" count="5" type="stmt"/>
@@ -51,79 +75,95 @@
       </file>
     </package>
     <package name="infra.criptography.jwt-adapter">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="jwt-adapter.ts" path="/home/wallace/cursos/clean-node-api/src/infra/criptography/jwt-adapter/jwt-adapter.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="11" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="21" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
       </file>
     </package>
     <package name="infra.db.mongodb.account">
-      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="account-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/account/account-mongo-repository.ts">
-        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
         <line num="19" count="6" type="stmt"/>
-        <line num="20" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="3" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="45" count="6" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="infra.db.mongodb.helpers">
       <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
       <file name="mongo-helpers.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/helpers/mongo-helpers.ts">
         <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="18" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="18" count="40" type="cond" truecount="1" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="21" count="22" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="26" count="5" type="stmt"/>
-        <line num="30" count="5" type="stmt"/>
+        <line num="21" count="40" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="9" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
       </file>
     </package>
     <package name="infra.db.mongodb.log">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="log-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/log/log-mongo-repository.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.db.mongodb.survey">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="survey-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/survey/survey-mongo-repository.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
     </package>
     <package name="infra.validators">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="email-validator-adapter.ts" path="/home/wallace/cursos/clean-node-api/src/infra/validators/email-validator-adapter.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
       </file>
     </package>
-    <package name="presentation.controllers.login">
+    <package name="presentation.controllers.login.login">
       <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="login-controller.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/controllers/login/login-controller.ts">
+      <file name="login-controller.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/controllers/login/login/login-controller.ts">
         <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
         <line num="10" count="8" type="stmt"/>
         <line num="11" count="8" type="stmt"/>
         <line num="12" count="8" type="cond" truecount="1" falsecount="0"/>
@@ -136,16 +176,16 @@
         <line num="25" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="presentation.controllers.signup">
+    <package name="presentation.controllers.login.signup">
       <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="signup-controller.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/controllers/signup/signup-controller.ts">
+      <file name="signup-controller.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/controllers/login/signup/signup-controller.ts">
         <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="8" count="12" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
-        <line num="10" count="12" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
         <line num="13" count="9" type="stmt"/>
         <line num="14" count="9" type="stmt"/>
         <line num="15" count="9" type="cond" truecount="1" falsecount="0"/>
@@ -159,103 +199,147 @@
         <line num="33" count="2" type="stmt"/>
       </file>
     </package>
+    <package name="presentation.controllers.survey.add-survey">
+      <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="add-survey-controller.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/controllers/survey/add-survey/add-survey-controller.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="presentation.errors">
-      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="access-denied-error.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/access-denied-error.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+      </file>
       <file name="email-in-use-error.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/email-in-use-error.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="13" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/index.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="13" type="stmt"/>
-        <line num="2" count="13" type="stmt"/>
-        <line num="3" count="13" type="stmt"/>
-        <line num="4" count="13" type="stmt"/>
-        <line num="5" count="13" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
+        <line num="2" count="17" type="stmt"/>
+        <line num="3" count="17" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
       </file>
       <file name="invalid-param-error.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/invalid-param-error.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="13" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
       </file>
       <file name="missing-param-error.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/missing-param-error.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="13" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
         <line num="3" count="9" type="stmt"/>
         <line num="4" count="9" type="stmt"/>
       </file>
       <file name="server-error .ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/server-error .ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="13" type="stmt"/>
-        <line num="3" count="8" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
-        <line num="5" count="8" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
       </file>
       <file name="unauthorized-error.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/errors/unauthorized-error.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="13" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
       </file>
     </package>
     <package name="presentation.helpers.http">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="http-helpers.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/helpers/http/http-helpers.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
-        <line num="14" count="7" type="stmt"/>
-        <line num="19" count="7" type="stmt"/>
-        <line num="24" count="14" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="19" count="11" type="stmt"/>
+        <line num="24" count="18" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.middlewares">
+      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <file name="auth-middleware.ts" path="/home/wallace/cursos/clean-node-api/src/presentation/middlewares/auth-middleware.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
     <package name="validation.validators">
       <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
       <file name="compare-fields-validation.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/compare-fields-validation.ts">
         <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
         <line num="10" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
       </file>
       <file name="email-validation.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/email-validation.ts">
         <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="7" count="15" type="stmt"/>
-        <line num="8" count="15" type="stmt"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
         <line num="11" count="6" type="stmt"/>
         <line num="12" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/index.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
       </file>
       <file name="required-field-validation.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/required-field-validation.ts">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="5" count="38" type="stmt"/>
-        <line num="8" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="58" type="stmt"/>
+        <line num="8" count="12" type="cond" truecount="1" falsecount="0"/>
         <line num="9" count="1" type="stmt"/>
       </file>
       <file name="validation-composite.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/validation-composite.ts">
         <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="17" type="stmt"/>
-        <line num="9" count="17" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="18" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="19" type="stmt"/>
+        <line num="9" count="19" type="cond" truecount="1" falsecount="0"/>
         <line num="10" count="2" type="stmt"/>
       </file>
     </package>
