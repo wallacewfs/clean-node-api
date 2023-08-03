@@ -26,17 +26,9 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mongodb": "^5.7.0",
-    "mongodb-memory-server": "^5.0.7",
     "nodemon": "^3.0.1",
     "npm": "^9.8.1",
     "validator": "^13.9.0"
-  },
-  "config": {
-    "mongodbMemoryServer": {
-      "version": "^5.0.7",
-      "debug": "1",
-      "arch": "x64"
-    }
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.1.7",
