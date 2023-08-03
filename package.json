@@ -33,7 +33,9 @@
   },
   "config": {
     "mongodbMemoryServer": {
-      "version": "^5.0.7"
+      "version": "^5.0.7",
+      "debug": "1",
+      "arch": "x64"
     }
   },
   "devDependencies": {
