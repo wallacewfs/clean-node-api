@@ -22,7 +22,7 @@ describe('Account Mogo Repository', () => {
   }
   )
 
-  describe('add(', () => {
+  describe('add()', () => {
     test('Should add a survey on sucess', async () => {
       const sut = makeSut()
       await sut.add({
@@ -37,6 +37,31 @@ describe('Account Mogo Repository', () => {
       })
       const survey = await surveyCollection.findOne({ question: 'any_question' })
       expect(survey).toBeTruthy()
+    })
+  })
+
+  describe('add()', () => {
+    test('Should load all surveys on sucess', async () => {
+      await surveyCollection.insertMany([{
+        question: 'any_question',
+        answers: [{
+          image: 'any_image',
+          answer: 'any_answer'
+        }],
+        date: new Date()
+      }, {
+        question: 'other_question',
+        answers: [{
+          image: 'other_image',
+          answer: 'other_answer'
+        }],
+        date: new Date()
+      }])
+      const sut = makeSut()
+      const surveys = await sut.loadAll()
+      expect(surveys.length).toBe(2)
+      expect(surveys[0].question).toBe('any_question')
+      expect(surveys[1].question).toBe('other_question')
     })
   })
 })
