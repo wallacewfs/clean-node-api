@@ -39,9 +39,7 @@ describe('Survey Routes', () => {
         })
         .expect(403)
     })
-  })
 
-  describe('POST /surveys', () => {
     test('Should return 204 on add survey with valid accessToken', async () => {
       const res = await accountCollection.insertOne({
         name: 'Rodrigo',
@@ -72,6 +70,14 @@ describe('Survey Routes', () => {
           }]
         })
         .expect(204)
+    })
+  })
+
+  describe('GET /surveys', () => {
+    test('Should return 403 on load surveys without accessToken', async () => {
+      await request(app)
+        .get('/api/surveys')
+        .expect(403)
     })
   })
 })
