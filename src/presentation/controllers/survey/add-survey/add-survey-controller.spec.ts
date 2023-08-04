@@ -7,7 +7,7 @@ const makeFakeRequest = (): HttpRequest => ({
   body: {
     question: 'any_question',
     answers: [{
-      imagem: 'any_image',
+      image: 'any_image',
       answer: 'any_answer'
     }],
     date: new Date()
