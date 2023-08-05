@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1691127492613" clover="3.2.0">
-  <project timestamp="1691127492613" name="All files">
+<coverage generated="1691273494816" clover="3.2.0">
+  <project timestamp="1691273494816" name="All files">
     <metrics statements="218" coveredstatements="218" conditionals="27" coveredconditionals="27" methods="61" coveredmethods="61" elements="306" coveredelements="306" complexity="0" loc="218" ncloc="218" packages="20" files="30" classes="30"/>
     <package name="data.usecases.add-account">
       <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -75,7 +75,7 @@
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="bcrypt-adapter.ts" path="/home/wallace/cursos/clean-node-api/src/infra/criptography/bcrypt-adapter/bcrypt-adapter.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
         <line num="5" count="6" type="stmt"/>
         <line num="6" count="22" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
@@ -88,7 +88,7 @@
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="jwt-adapter.ts" path="/home/wallace/cursos/clean-node-api/src/infra/criptography/jwt-adapter/jwt-adapter.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
         <line num="5" count="6" type="stmt"/>
         <line num="6" count="26" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
@@ -101,8 +101,8 @@
       <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="account-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/account/account-mongo-repository.ts">
         <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
         <line num="10" count="6" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
@@ -141,7 +141,7 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="log-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/log/log-mongo-repository.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="6" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
@@ -151,7 +151,7 @@
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="survey-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/survey/survey-mongo-repository.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="4" count="6" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
@@ -337,7 +337,7 @@
       </file>
       <file name="email-validation.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/email-validation.ts">
         <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="9" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
         <line num="5" count="9" type="stmt"/>
         <line num="7" count="17" type="stmt"/>
         <line num="8" count="17" type="stmt"/>
@@ -354,7 +354,7 @@
       </file>
       <file name="required-field-validation.ts" path="/home/wallace/cursos/clean-node-api/src/validation/validators/required-field-validation.ts">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="9" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
         <line num="4" count="9" type="stmt"/>
         <line num="5" count="58" type="stmt"/>
         <line num="8" count="12" type="cond" truecount="1" falsecount="0"/>
