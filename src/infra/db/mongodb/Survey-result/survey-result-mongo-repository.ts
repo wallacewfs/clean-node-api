@@ -7,7 +7,7 @@ export class SurveyResultMongoRepository implements SaveSurveyResultRepository {
   async save (data: SaveSurveyResultModel): Promise<SurveyResultModel> {
     const surveyResultCollection = await MongoHelper.getColletion('surveyResults')
     const res = await surveyResultCollection.findOneAndUpdate({
-      surveId: data.surveyId,
+      surveyId: data.surveyId,
       accountId: data.accountId
     }, {
       $set: {
