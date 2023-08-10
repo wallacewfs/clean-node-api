@@ -1,24 +1,8 @@
+import { mockAddSurveyRepository } from '@/data/test'
 import { DbAddSurvey } from './db-add-survey'
-import { AddSurveyParams, AddSurveyRepository } from './db-add-survey-protocols'
+import { AddSurveyRepository } from './db-add-survey-protocols'
+import { throwError, mockSurveyParams } from '@/domain/test'
 import Mockdate from 'mockdate'
-
-const makeFakeSurveyData = (): AddSurveyParams => ({
-  question: 'any_question',
-  answers: [{
-    image: 'any_image',
-    answer: 'any_aswer'
-  }],
-  date: new Date()
-})
-
-const makeAddSurveyRepository = (): AddSurveyRepository => {
-  class AddSurveyRepositoryStub implements AddSurveyRepository {
-    async add (data: AddSurveyParams): Promise<void> {
-      return new Promise(resolve => resolve())
-    }
-  }
-  return new AddSurveyRepositoryStub()
-}
 
 type SutTypes = {
   sut: DbAddSurvey
@@ -26,7 +10,7 @@ type SutTypes = {
 }
 
 const makeSut = (): SutTypes => {
-  const addSurveyRepositoryStub = makeAddSurveyRepository()
+  const addSurveyRepositoryStub = mockAddSurveyRepository()
   const sut = new DbAddSurvey(addSurveyRepositoryStub)
   return {
     sut,
@@ -46,15 +30,15 @@ describe('DbAddSurvey Usecase', () => {
   test('Should call AddSurveyRepository with correct values', async () => {
     const { sut, addSurveyRepositoryStub } = makeSut()
     const addSpy = jest.spyOn(addSurveyRepositoryStub,'add')
-    const surveyData = makeFakeSurveyData()
+    const surveyData = mockSurveyParams()
     await sut.add(surveyData)
     expect(addSpy).toHaveBeenLastCalledWith(surveyData)
   })
 
   test('Should throw if AddAccountRepository throws', async () => {
     const { sut, addSurveyRepositoryStub } = makeSut()
-    jest.spyOn(addSurveyRepositoryStub, 'add').mockReturnValueOnce(new Promise((resolve,reject) => reject(new Error())))
-    const promise = sut.add(makeFakeSurveyData())
+    jest.spyOn(addSurveyRepositoryStub, 'add').mockImplementationOnce(throwError)
+    const promise = sut.add(mockSurveyParams())
     await expect(promise).rejects.toThrow()
   })
 })

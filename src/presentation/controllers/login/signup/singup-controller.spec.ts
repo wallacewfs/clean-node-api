@@ -1,40 +1,8 @@
 import { SingUpController } from './signup-controller'
 import { EmailInUseError, MissingParamError, ServerError } from '@/presentation/errors'
-import { AccountModel, AddAccount, AddAccountParams, HttpRequest, Validation, Authentication, AuthenticationParams } from './signup-controller-protocols'
+import { AddAccount, HttpRequest, Validation, Authentication } from './signup-controller-protocols'
 import { ok, serverError, badRequest, forbidden } from '@/presentation/helpers/http/http-helpers'
-
-const makeAuthentication = (): Authentication => {
-  class AuthenticationStub implements Authentication {
-    async auth (authenticatio: AuthenticationParams): Promise<string> {
-      return new Promise(resolve => resolve('any_token'))
-    }
-  }
-  return new AuthenticationStub()
-}
-
-const makeAddAccount = (): AddAccount => {
-  class AddAccountStub implements AddAccount {
-    async add (account: AddAccountParams): Promise<AccountModel | null> {
-      return new Promise(resolve => resolve(makeFakeAccount()))
-    }
-  }
-  return new AddAccountStub()
-}
-
-const makeValidation = (): Validation => {
-  class ValidationStub implements Validation {
-    validate (input: any): Error | null {
-      return null
-    }
-  }
-  return new ValidationStub()
-}
-const makeFakeAccount = (): AccountModel => ({
-  id: 'valid_id',
-  name: 'valid_name',
-  email: 'valid_email@mail.com',
-  password: 'valid_password'
-})
+import { mockAddAccount, mockAuthentication, mockValidation } from '@/presentation/test'
 
 const makeFakeRequest = (): HttpRequest => ({
   body: {
@@ -53,9 +21,9 @@ type SutTypes = {
 }
 
 const makeSut = (): SutTypes => {
-  const addAccountStub = makeAddAccount()
-  const validationStub = makeValidation()
-  const authenticationStub = makeAuthentication()
+  const addAccountStub = mockAddAccount()
+  const validationStub = mockValidation()
+  const authenticationStub = mockAuthentication()
   const sut = new SingUpController(addAccountStub, validationStub, authenticationStub)
   return {
     sut,

@@ -1,6 +1,7 @@
 import { Collection } from 'mongodb'
 import { MongoHelper } from '../helpers/mongo-helpers'
 import { AccountMongoRepository } from '../account/account-mongo-repository'
+import { mockAddAccountParams } from '@/domain/test/mock-account'
 
 let accountCollection: Collection
 
@@ -25,11 +26,7 @@ describe('Account Mogo Repository', () => {
   describe('add()', () => {
     test('Should return an account on add sucess', async () => {
       const sut = makeSut()
-      const account = await sut.add({
-        name: 'any_name',
-        email: 'any_email@mail.com',
-        password: 'any_password'
-      })
+      const account = await sut.add(mockAddAccountParams())
       expect(account).toBeTruthy()
       expect(account.id).toBeTruthy()
       expect(account.name).toBe('any_name')
@@ -41,11 +38,7 @@ describe('Account Mogo Repository', () => {
   describe('loadByEmail()', () => {
     test('Should return an account on loadByEmail sucess', async () => {
       const sut = makeSut()
-      await accountCollection.insertOne({
-        name: 'any_name',
-        email: 'any_email@mail.com',
-        password: 'any_password'
-      })
+      await accountCollection.insertOne(mockAddAccountParams())
       const account = await sut.loadbyEmail('any_email@mail.com')
       expect(account).toBeTruthy()
       expect(account.id).toBeTruthy()
@@ -64,11 +57,7 @@ describe('Account Mogo Repository', () => {
   describe('updateAccessToken()', () => {
     test('Should update the account accesToken on updateAccessToken succees', async () => {
       const sut = makeSut()
-      const result = await accountCollection.insertOne({
-        name: 'any_name',
-        email: 'any_email@mail.com',
-        password: 'any_password'
-      })
+      const result = await accountCollection.insertOne(mockAddAccountParams())
       const fakeAccount = await accountCollection.findOne({ _id: result.insertedId })
       expect(fakeAccount?.accessToken).toBeFalsy()
       await sut.updateAccessToken(result.insertedId.toString(), 'any_token')
