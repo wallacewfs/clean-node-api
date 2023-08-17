@@ -180,6 +180,6 @@ export class SurveyResultMongoRepository implements SaveSurveyResultRepository, 
       })
       .build()
     const surveyResult = await surveyResultCollection.aggregate(query).toArray()
-    return surveyResult?.length ? MongoHelper.map(surveyResult[0]) : null
+    return surveyResult.length ? MongoHelper.map(surveyResult[0]) : null
   }
 }
