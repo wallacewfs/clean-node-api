@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1693454364649" clover="3.2.0">
-  <project timestamp="1693454364649" name="All files">
-    <metrics statements="296" coveredstatements="296" conditionals="36" coveredconditionals="36" methods="84" coveredmethods="84" elements="416" coveredelements="416" complexity="0" loc="296" ncloc="296" packages="26" files="38" classes="38"/>
+<coverage generated="1701736188858" clover="3.2.0">
+  <project timestamp="1701736188858" name="All files">
+    <metrics statements="297" coveredstatements="297" conditionals="36" coveredconditionals="36" methods="84" coveredmethods="84" elements="417" coveredelements="417" complexity="0" loc="297" ncloc="297" packages="26" files="38" classes="38"/>
     <package name="data.usecases.account.add-account">
       <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="db-addccount.ts" path="/home/wallace/cursos/clean-node-api/src/data/usecases/account/add-account/db-addccount.ts">
@@ -22,19 +22,19 @@
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="db-authentication.ts" path="/home/wallace/cursos/clean-node-api/src/data/usecases/account/authentication/db-authentication.ts">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="12" count="25" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
         <line num="13" count="25" type="stmt"/>
         <line num="14" count="25" type="stmt"/>
         <line num="15" count="25" type="stmt"/>
-        <line num="19" count="14" type="stmt"/>
-        <line num="20" count="13" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="11" type="stmt"/>
-        <line num="22" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="9" type="stmt"/>
-        <line num="24" count="8" type="stmt"/>
-        <line num="25" count="7" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
+        <line num="16" count="25" type="stmt"/>
+        <line num="20" count="14" type="stmt"/>
+        <line num="21" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="23" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
       </file>
     </package>
     <package name="data.usecases.account.load-account-by-token">
@@ -177,8 +177,8 @@
       <metrics statements="25" coveredstatements="25" conditionals="1" coveredconditionals="1" methods="15" coveredmethods="15"/>
       <file name="index.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/helpers/index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="8" type="stmt"/>
-        <line num="2" count="8" type="stmt"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
       </file>
       <file name="mongo-helpers.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/helpers/mongo-helpers.ts">
         <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
@@ -188,26 +188,26 @@
         <line num="9" count="9" type="stmt"/>
         <line num="13" count="9" type="stmt"/>
         <line num="14" count="9" type="stmt"/>
-        <line num="18" count="88" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="96" type="cond" truecount="1" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="21" count="88" type="stmt"/>
-        <line num="25" count="27" type="stmt"/>
-        <line num="26" count="27" type="stmt"/>
+        <line num="21" count="96" type="stmt"/>
+        <line num="25" count="29" type="stmt"/>
+        <line num="26" count="29" type="stmt"/>
         <line num="30" count="3" type="stmt"/>
       </file>
       <file name="query-builder.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/helpers/query-builder.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
-        <line num="1" count="8" type="stmt"/>
-        <line num="2" count="4" type="stmt"/>
-        <line num="5" count="60" type="stmt"/>
-        <line num="8" count="60" type="stmt"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="5" count="66" type="stmt"/>
+        <line num="8" count="66" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
         <line num="16" count="20" type="stmt"/>
         <line num="20" count="4" type="stmt"/>
         <line num="24" count="12" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="32" count="16" type="stmt"/>
-        <line num="36" count="4" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="32" count="19" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
       </file>
     </package>
     <package name="infra.db.mongodb.log">
@@ -221,9 +221,9 @@
       </file>
     </package>
     <package name="infra.db.mongodb.survey">
-      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="survey-mongo-repository.ts" path="/home/wallace/cursos/clean-node-api/src/infra/db/mongodb/survey/survey-mongo-repository.ts">
-        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="9" type="stmt"/>
         <line num="6" count="9" type="stmt"/>
         <line num="8" count="9" type="stmt"/>
@@ -232,10 +232,11 @@
         <line num="12" count="2" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="23" count="8" type="stmt"/>
-        <line num="24" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="50" count="8" type="stmt"/>
+        <line num="51" count="8" type="stmt"/>
+        <line num="52" count="8" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="infra.validators">
