@@ -1,4 +1,4 @@
-import { HttpResponse, HttpRequest, Controller, Validation } from '@/presentation/protocols'
+import { HttpResponse, Controller, Validation } from '@/presentation/protocols'
 import { AddAccount, Authentication } from '@/domain/usecases'
 import { badRequest, serverError, ok, forbidden } from '@/presentation/helpers'
 import { EmailInUseError } from '@/presentation/errors'
@@ -9,19 +9,19 @@ export class SingUpController implements Controller {
     private readonly validation: Validation,
     private readonly authentication: Authentication) { }
 
-  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
+  async handle (request: SingUpController.Request): Promise<HttpResponse> {
     try {
-      const error = this.validation.validate(httpRequest.body)
+      const error = this.validation.validate(request)
       if (error) {
         return badRequest(error)
       }
-      const { name, email, password } = httpRequest.body
-      const account = await this.addAccount.add({
+      const { name, email, password } = request
+      const isValid = await this.addAccount.add({
         name,
         email,
         password
       })
-      if (!account) {
+      if (!isValid) {
         return forbidden(new EmailInUseError())
       }
       const authenticationModel = await this.authentication.auth(({
@@ -32,5 +32,14 @@ export class SingUpController implements Controller {
     } catch (error) {
       return serverError(error)
     }
+  }
+}
+
+export namespace SingUpController {
+  export type Request = {
+    name: string
+    email: string
+    password: string
+    passwordConfirmation: string
   }
 }
