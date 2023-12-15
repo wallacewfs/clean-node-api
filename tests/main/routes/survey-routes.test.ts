@@ -16,11 +16,8 @@ const makeAccessToken = async (): Promise<string> => {
     role: 'admin'
   })
 
-  console.log('Env.jwtSecrete:' , env.jwtSecret)
   const id = res.insertedId.toHexString()
-  console.log('Inserted ID :' , id)
   const accessToken = sign({ id }, env.jwtSecret)
-  console.log('accessToken :' , accessToken)
   await accountCollection.updateOne({
     _id: res.insertedId
   }, {
@@ -28,7 +25,6 @@ const makeAccessToken = async (): Promise<string> => {
       accessToken
     }
   })
-  console.log('accessTokenAfterInsert :' , accessToken)
   return accessToken
 }
 
@@ -66,7 +62,6 @@ describe('Survey Routes', () => {
 
     test('Should return 204 on add survey with valid accessToken', async () => {
       const accessToken = await makeAccessToken()
-      console.log('accessToken retornardo função : ', accessToken)
       await request(app)
         .post('/api/surveys')
         .set('x-access-token', accessToken)

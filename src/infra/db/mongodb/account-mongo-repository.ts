@@ -1,5 +1,4 @@
 import { MongoHelper } from '@/infra/db'
-import { AccountModel } from '@/domain/models'
 import { AddAccountRepository , LoadAccountByEmailRepository, UpdateAccessTokenRepository , LoadAccountByTokenRepository } from '@/data/protocols/db'
 import { ObjectId } from 'mongodb'
 
@@ -7,13 +6,20 @@ export class AccountMongoRepository implements AddAccountRepository, LoadAccount
   async add (data: AddAccountRepository.Params): Promise<AddAccountRepository.Result> {
     const accountCollection = await MongoHelper.getColletion('accounts')
     const result = await accountCollection.insertOne(data)
-    const accountInserted = await accountCollection.findOne({ _id: result.insertedId })
-    return MongoHelper.map(accountInserted)
+    return result !== null
   }
 
-  async loadByEmail (email: string): Promise<AccountModel> {
+  async loadByEmail (email: string): Promise<LoadAccountByEmailRepository.Result> {
     const accountCollection = await MongoHelper.getColletion('accounts')
-    const account = await accountCollection.findOne({ email })
+    const account = await accountCollection.findOne({
+      email
+    }, {
+      projection: {
+        _id: 1,
+        name: 1,
+        password: 1
+      }
+    })
     return account && MongoHelper.map(account)
   }
 

@@ -5,11 +5,11 @@ import { faker } from '@faker-js/faker'
 export const mockSurveyModel = (): SurveyModel => {
   return {
     id: faker.string.uuid(),
-    question: faker.word.words(),
+    question: faker.word.sample(),
     answers: [{
-      answer: faker.word.words()
+      answer: faker.word.sample()
     }, {
-      answer: faker.word.words(),
+      answer: faker.word.sample(),
       image: faker.image.url()
     }],
     date: faker.date.recent()
@@ -24,12 +24,12 @@ export const mockSurveysModels = (): SurveyModel[] => {
 }
 
 export const mockAddSurveyParams = (): AddSurvey.Params => ({
-  question: faker.word.words(),
+  question: faker.word.sample(),
   answers: [{
     image: faker.image.url(),
-    answer: faker.word.words()
+    answer: faker.word.sample()
   },{
-    answer: faker.word.words()
+    answer: faker.word.sample()
   }],
   date: faker.date.recent()
 })
