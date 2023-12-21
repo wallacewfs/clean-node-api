@@ -13,6 +13,6 @@
             "@/*": ["*"]
         }
     },
-    "include": ["src", "tests", "load-account-by-token.ts"],
+    "include": ["src", "tests", "src/domain/usecases/load-account-by-token.ts"],
     "exclude": []
 }
