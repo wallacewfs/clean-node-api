@@ -1,6 +1,7 @@
-import { AddSurveyRepository, LoadSurveysRepository, LoadSurveyByIdRepository, CheckSurveyByIdRepository } from '@/data/protocols'
+import { AddSurveyRepository, LoadSurveysRepository, LoadSurveyByIdRepository, CheckSurveyByIdRepository, LoadAnswersBySurveyRepository } from '@/data/protocols'
 import { SurveyModel } from '@/domain/models'
 import { mockSurveyModel, mockSurveysModels } from '@/tests/domain/mocks'
+import { faker } from '@faker-js/faker'
 
 export class AddSurveyRepositorySpy implements AddSurveyRepository {
   addSurveyParams: AddSurveyRepository.Params
@@ -16,6 +17,16 @@ export class LoadSurveyByIdRepositorySpy implements LoadSurveyByIdRepository {
   id: string
 
   async loadById (id: string): Promise<LoadSurveyByIdRepository.Result> {
+    this.id = id
+    return Promise.resolve(this.result)
+  }
+}
+
+export class LoadAnswersBySurveyRepositorySpy implements LoadAnswersBySurveyRepository {
+  result = [faker.word.sample(), faker.word.sample()]
+  id: string
+
+  async loadAnswers (id: string): Promise<LoadAnswersBySurveyRepository.Result> {
     this.id = id
     return Promise.resolve(this.result)
   }
